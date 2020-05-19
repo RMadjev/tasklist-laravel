@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'DashboardController@index');
+
+// actions on lists
+Route::post('/list', 'ListController@store');
+Route::post('/list/{id}/task', 'ListController@addTask')->where('id','[0-9]+');
+Route::get('/list/{id}', 'ListController@show')->where('id','[0-9]+');
+Route::patch('/list/{id}', 'ListController@update')->where('id','[0-9]+');
+Route::delete('/list/{id}', 'ListController@destroy')->where('id','[0-9]+');
+
+//actions on tasks
+Route::patch('/task/{id}', 'TaskController@update')->where('id','[0-9]+');
+
