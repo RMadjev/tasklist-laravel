@@ -1,1 +1,28 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.task-list {
+    width: 50%;
+}
+
+.new-task-list .message {
+    margin-top: 10px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+
